@@ -1,4 +1,5 @@
 # skhd -c /path/to/your/config/skhdrc
+# https://github.com/koekeishiya/skhd#
 
 # App based window focus
 cmd + ctrl - 1 : yabai -m window --focus "$(yabai -m query --windows | jq 'map(select(.app == "Code")) | .[0].id')"
