@@ -1,0 +1,16 @@
+# skhd -c /path/to/your/config/skhdrc
+
+# App based window focus
+cmd + ctrl - 1 : yabai -m window --focus "$(yabai -m query --windows | jq 'map(select(.app == "Code")) | .[0].id')"
+cmd + ctrl - 2 : yabai -m window --focus "$(yabai -m query --windows | jq 'map(select(.app == "Arc")) | .[0].id')"
+cmd + ctrl - 3 : yabai -m window --focus "$(yabai -m query --windows | jq 'map(select(.app == "Slack")) | .[0].id')"
+
+cmd + ctrl - m : yabai -m window --focus "$(yabai -m query --windows | jq 'map(select(.app == "MongoDB Compass")) | .[0].id')"
+cmd + ctrl - p : yabai -m window --focus "$(yabai -m query --windows | jq 'map(select(.app == "Postman")) | .[0].id')"
+cmd + ctrl - t : yabai -m window --focus "$(yabai -m query --windows | jq 'map(select(.app == "iTerm2")) | .[0].id')"
+
+# Space focus
+ctrl + alt - 1 : yabai -m space --focus 1
+ctrl + alt - 2 : yabai -m space --focus 2
+ctrl + alt - 3 : yabai -m space --focus 3
+ctrl + alt - 4 : yabai -m space --focus 4
