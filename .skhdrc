@@ -1,15 +1,22 @@
 # skhd -c /path/to/your/config/skhdrc
 # https://github.com/koekeishiya/skhd#
 
-# App based window focus
-cmd + ctrl - 1 : yabai -m window --focus "$(yabai -m query --windows | jq 'map(select(.app == "Code")) | .[0].id')"
-cmd + ctrl - 2 : yabai -m window --focus "$(yabai -m query --windows | jq 'map(select(.app == "Arc")) | .[0].id')"
+:: default
+:: lead
 
-cmd + ctrl - s : yabai -m window --focus "$(yabai -m query --windows | jq 'map(select(.app == "Slack")) | .[0].id')"
-cmd + ctrl - m : yabai -m window --focus "$(yabai -m query --windows | jq 'map(select(.app == "MongoDB Compass")) | .[0].id')"
-cmd + ctrl - p : yabai -m window --focus "$(yabai -m query --windows | jq 'map(select(.app == "Postman")) | .[0].id')"
-cmd + ctrl - t : yabai -m window --focus "$(yabai -m query --windows | jq 'map(select(.app == "iTerm2")) | .[0].id')"
-cmd + ctrl - n : yabai -m window --focus "$(yabai -m query --windows | jq 'map(select(.app == "Notes")) | .[0].id')"
+
+# Leader key
+cmd - 0x32 ; lead
+lead < 0x35 ; default
+# App based window focus
+lead < cmd - 1 : yabai -m window --focus "$(yabai -m query --windows | jq 'map(select(.app == "Code")) | .[0].id')"
+lead < cmd - 2 : yabai -m window --focus "$(yabai -m query --windows | jq 'map(select(.app == "Arc")) | .[0].id')"
+
+lead < cmd - s : yabai -m window --focus "$(yabai -m query --windows | jq 'map(select(.app == "Slack")) | .[0].id')"
+lead < cmd - m : yabai -m window --focus "$(yabai -m query --windows | jq 'map(select(.app == "MongoDB Compass")) | .[0].id')"
+lead < cmd - p : yabai -m window --focus "$(yabai -m query --windows | jq 'map(select(.app == "Postman")) | .[0].id')"
+lead < cmd - t : yabai -m window --focus "$(yabai -m query --windows | jq 'map(select(.app == "iTerm2")) | .[0].id')"
+lead < cmd - n : yabai -m window --focus "$(yabai -m query --windows | jq 'map(select(.app == "Notes")) | .[0].id')"
 
 # Space focus
 ctrl + alt - 1 : yabai -m space --focus 1
