@@ -20,3 +20,6 @@
 
 ## sketchybar
 https://felixkratz.github.io/SketchyBar/setup
+
+## aerospace
+ln -s ./aerospace/aerospace.toml ~/.aerospace.toml
