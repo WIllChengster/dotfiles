@@ -20,6 +20,7 @@
 
 ## sketchybar
 https://felixkratz.github.io/SketchyBar/setup
+brew install --cask sf-symbols
 
 ## aerospace
 ln -s ./aerospace/aerospace.toml ~/.aerospace.toml
