@@ -20,8 +20,21 @@
 
 ## sketchybar
 https://felixkratz.github.io/SketchyBar/setup
-brew install --cask sf-symbols
-brew install --cask font-sketchybar-app-font
+`brew install --cask sf-symbols`
+`brew install --cask font-sketchybar-app-font`
 
 ## aerospace
 ln -s ./aerospace/aerospace.toml ~/.aerospace.toml
+
+```bash
+brew tap FelixKratz/formulae
+brew install borderszz
+```
+
+
+optional
+
+```bash
+mv sketchybar ~/.config/sketchybar
+mv aerospace ~/.config/aerospace
+```
