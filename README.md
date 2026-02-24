@@ -21,6 +21,7 @@
 ## sketchybar
 https://felixkratz.github.io/SketchyBar/setup
 brew install --cask sf-symbols
+brew install --cask font-sketchybar-app-font
 
 ## aerospace
 ln -s ./aerospace/aerospace.toml ~/.aerospace.toml
